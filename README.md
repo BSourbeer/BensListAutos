@@ -6,7 +6,7 @@ This is a tool to scan craigslist automotive "for sale" listings and store the d
 
 ## How it works
 
-**Scraping data**
+#####Scraping data#####
 
 The first step is to scan all current craigslist locations, parse the automotive ads ("for sale - by owner"), and insert into our listing table.  The html parsing is handled by jsoup.
 ```java
@@ -47,7 +47,7 @@ After we parse all of the data that we need, we insert into the listing table.  
 	void insertListing (Listing listing);
 ```
 
-**Data Validation**
+#####Data Validation#####
 
 Now that the craigslist data is stored locally, it is now time to attempt to match each listing into a year, make, and model.  We have a table of valid makes and models, which is what we are matching against.  A craigslist ad has two fields of interest in this portion, a *title*, and a field that is intended to display year, make, and model, which we will call *yearMakeModel*.  Unfortunately, the make and model portion of *yearMakeModel* is entered by the seller without validation, so it often is contains garbage information.
 
@@ -151,15 +151,17 @@ Regardless, our strategy is to attempt to parse out a valid year, make, and mode
 
 If we are able to put together a valid year, make, and model, then we insert into the Valid_Listing table.  
 
-**Searching the data**
+#####Searching#####
 
 Currently, there is a basic front end that allows the user to search by text or search by selecting/entering filters to search the validated information.  The text search will search all of the listings in the listing table, even those that have failed validation.  The **ADMIN** link at the bottom leads to a page that allows the user to launch the scanning of craigslist ads and validate existing data.
+
 ![Search Page](http://i.imgur.com/aXsqboM.png)
 
 If we were to submit a search for 
  - Make: Subaru
  - Model: WRX
  - Transmission: manual
+ - 
 ![Results Page](http://i.imgur.com/8dkiIgN.png)
 
 
