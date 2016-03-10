@@ -167,7 +167,7 @@ If we were to submit a search for:
 
 ## Motivation
 
-Craigslist currently has no way of searching on a national basis and does not provide any sort of API to access their large pool of data.  Many people search for used cars on a larger radius than what is supplied by craigslist, so their only option is to visit multiple craigslist sites and search them individually.  The goal with this project was to solve that solution while simultaneously provide the ability to filer search results by year, make, and model.
+Craigslist currently has no way of searching on a national basis and does not provide any sort of API to access their large pool of data.  Many people search for used cars on a larger radius than what is supplied by craigslist, so their only option is to visit multiple craigslist sites and search them individually.  The goal with this project was to solve that problem while simultaneously providing the ability to filter search results by year, make, and model.
 
 In addition to the search functionality, my goals are to be able to use this data to provide meaningful data to assist in researching pricing trends of used cars.  If we were able to continue to track this data over time, we would be able to do the following:
 
