@@ -157,7 +157,7 @@ Currently, there is a basic front end that allows the user to search by text or 
 
 ![Search Page](http://i.imgur.com/aXsqboM.png)
 
-If we were to submit a search for 
+If we were to submit a search for:
  - Make: Subaru
  - Model: WRX
  - Transmission: manual
