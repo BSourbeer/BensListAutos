@@ -161,7 +161,7 @@ If we were to submit a search for
  - Make: Subaru
  - Model: WRX
  - Transmission: manual
- - 
+
 ![Results Page](http://i.imgur.com/8dkiIgN.png)
 
 
