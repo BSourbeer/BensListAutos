@@ -49,7 +49,7 @@ After we parse all of the data that we need, we insert into the listing table.  
 
 #####Data Validation#####
 
-Now that the craigslist data is stored locally, it is now time to attempt to match each listing into a year, make, and model.  We have a table of valid makes and models, which is what we are matching against.  A craigslist ad has two fields of interest in this portion, a *title*, and a field that is intended to display year, make, and model, which we will call *yearMakeModel*.  Unfortunately, the make and model portion of *yearMakeModel* is entered by the seller without validation, so it often is contains garbage information.
+Now that the craigslist data is stored locally, it is now time to attempt to match each listing to a year, make, and model.  We have a table of valid makes and models which is what we are matching against.  A craigslist ad has two fields of interest for this information, a *title* and a field that is intended to display year, make, and model, which we will call *yearMakeModel*.  Unfortunately, the make and model portion of *yearMakeModel* is entered by the seller without validation, so it often is contains garbage information.
 
 Regardless, our strategy is to attempt to parse out a valid year, make, and model from the *title* and *yearMakeModel* fields.  
 
@@ -153,7 +153,7 @@ If we are able to put together a valid year, make, and model, then we insert int
 
 #####Searching#####
 
-Currently, there is a basic front end that allows the user to search by text or search by selecting/entering filters to search the validated information.  The text search will search all of the listings in the listing table, even those that have failed validation.  The **ADMIN** link at the bottom leads to a page that allows the user to launch the scanning of craigslist ads and validate existing data.
+Currently, there is a basic front end that allows the user to search by text or search by selecting/entering filters to search the validated information.  The text search will search the *title* all of the listings in the listing table, even those that have failed validation.  The admin link at the bottom leads to a page that allows the user to launch the scanning of craigslist ads and validate existing data.
 
 ![Search Page](http://i.imgur.com/aXsqboM.png)
 
@@ -167,7 +167,7 @@ If we were to submit a search for:
 
 ## Motivation
 
-Craigslist currently has no way of searching on a national basis and does not provide any sort of API to access their large pool of data.  Many people search for used cars on a larger radius than what is supplied by craigslist, so their only option is to visit multiple craigslist sites and search them individually.  The goal with this project was to solve that problem while simultaneously providing the ability to filter search results by year, make, and model.
+Craigslist currently has no way of searching on a national scale and does not provide any sort of API to access their large pool of data.  Many people search for used cars with a larger radius than what is supplied by craigslist, so their only option is to visit multiple craigslist sites and search them individually.  The goal with this project was to solve that problem while simultaneously providing the ability to filter search results by year, make, and model.
 
 In addition to the search functionality, my goals are to be able to use this data to provide meaningful data to assist in researching pricing trends of used cars.  If we were able to continue to track this data over time, we would be able to do the following:
 
