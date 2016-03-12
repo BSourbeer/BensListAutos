@@ -49,7 +49,7 @@ After we parse all of the data that we need, we insert into the listing table.  
 
 #####Data Validation#####
 
-Now that the craigslist data is stored locally, it is now time to attempt to match each listing to a year, make, and model.  We have a table of valid makes and models which is what we are matching against.  A craigslist ad has two fields of interest for this information, a *title* and a field that is intended to display year, make, and model, which we will call *yearMakeModel*.  Unfortunately, the make and model portion of *yearMakeModel* is entered by the seller without validation, so it often is contains garbage information.
+Now that the craigslist data is stored locally, it is time to attempt to match each listing to a year, make, and model.  We have a table of valid makes and models which is what we are matching against.  A craigslist ad has two fields of interest for this information, a *title* and a field that is intended to display year, make, and model, which we will call *yearMakeModel*.  Unfortunately, the make and model portion of *yearMakeModel* is entered by the seller without validation, so it often is contains garbage information.
 
 Regardless, our strategy is to attempt to parse out a valid year, make, and model from the *title* and *yearMakeModel* fields.  
 
