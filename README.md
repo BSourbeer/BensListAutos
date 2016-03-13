@@ -155,14 +155,18 @@ If we are able to put together a valid year, make, and model, then we insert int
 
 Currently, there is a basic front end that allows the user to search by text or search by selecting/entering filters to search the validated information.  The text search will search the *title* all of the listings in the listing table, even those that have failed validation.  The admin link at the bottom leads to a page that allows the user to launch the scanning of craigslist ads and validate existing data.
 
-![Search Page](http://i.imgur.com/aXsqboM.png)
+![Search Page](http://i.imgur.com/GLEct5y.png)
 
 If we were to submit a search for:
  - Make: Subaru
- - Model: WRX
- - Transmission: manual
+ - Model: Forester
+ - Minimum Odometer: 20000
+ - Maximum Odometer: 200000
+ - Minimum Price: 2000
+ - Maximum Price: 15000
+ - Title: Clean
 
-![Results Page](http://i.imgur.com/8dkiIgN.png)
+![Results Page](http://i.imgur.com/tAHgDoI.png)
 
 
 ## Motivation
