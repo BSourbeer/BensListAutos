@@ -128,6 +128,8 @@ public class BensListManager {
 	private ValidCar matchYearMakeModel(String s){
 		
 		ValidCar validCar = new ValidCar();
+		boolean matched = false;
+		
 		// - if this string is empty, just return
 		if (StringUtils.isEmpty(s)){
 			return validCar;
@@ -138,7 +140,7 @@ public class BensListManager {
 		
 		// - go through each word and try to match it to a year, make, or a model.  Once matched, remove it from the arrayList
 		for (int i=0; i<wordList.size(); i++){
-			boolean matched = false;
+			matched = false;
 				
 			// - YEAR
 			if (validCar.getYear() == 0 && StringUtils.isNumeric(wordList.get(i))){
