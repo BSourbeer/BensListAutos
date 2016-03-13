@@ -57,6 +57,8 @@ Regardless, our strategy is to attempt to parse out a valid year, make, and mode
 	private ValidCar matchYearMakeModel(String s){
 		
 		ValidCar validCar = new ValidCar();
+		boolean matched = false;
+		
 		// - if this string is empty, just return
 		if (StringUtils.isEmpty(s)){
 			return validCar;
@@ -67,7 +69,7 @@ Regardless, our strategy is to attempt to parse out a valid year, make, and mode
 		
 		// - go through each word and try to match it to a year, make, or a model.  Once matched, remove it from the arrayList
 		for (int i=0; i<wordList.size(); i++){
-			boolean matched = false;
+			matched = false;
 				
 			// - YEAR
 			if (validCar.getYear() == 0 && StringUtils.isNumeric(wordList.get(i))){
