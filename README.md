@@ -153,7 +153,7 @@ If we are able to put together a valid year, make, and model, then we insert int
 
 #####Searching#####
 
-Currently, there is a basic front end that allows the user to search by text or search by selecting/entering filters to search the validated information.  The text search will search the *title* all of the listings in the listing table, even those that have failed validation.  The admin link at the bottom leads to a page that allows the user to launch the scanning of craigslist ads and validate existing data.
+Currently, there is a basic front end that allows the user to search by text or search by selecting/entering filters to search the validated information.  The text search will search the *title* all of the listings in the listing table, even those that have failed validation.  The second section will search only from validated listings, which is why we are able to filter by make, model, and state.  The admin link at the bottom leads to a page that allows the user to launch the scanning of craigslist ads and validate existing data.
 
 ![Search Page](http://i.imgur.com/GLEct5y.png)
 
