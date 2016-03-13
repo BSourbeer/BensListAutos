@@ -56,12 +56,15 @@ public class BensListController {
 		mv.addObject("listings",listings);
 		mv.addObject("limit", limit);
 		mv.addObject("offset", offset+limit);
+		
 		if (offset>=limit){
 			mv.addObject("previousOffset", offset-limit);
 		} else {
 			mv.addObject("previousOffset", 0);
 		}
+		
 		mv.addObject("searchTerm", searchTerm);
+		
 		logger.info("Limit: " + limit + " | Offset: " + offset + " | searchTerm: " + searchTerm);
 		return mv;
 	}

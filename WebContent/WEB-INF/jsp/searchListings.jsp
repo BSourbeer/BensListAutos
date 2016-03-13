@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
@@ -12,51 +13,59 @@ $(document).ready(function(){
 });
 </script>
 <title>Search Result Page</title>
-<style>
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-table, td, th {
-    border: 1px solid black;
-}
-</style>
 </head>
 <body>
 
 <c:if test="${not empty listings}">
-    <table>
-		<tr>
-			<th>Title</th>
-			<th>YearMakeModel</th>
-			<th>location</th>
-			<th>url</th>
-		</tr>
-        <c:forEach var="l" items="${listings}">
-            <tr>
-                <td>${l.title}</td>
-                <td>${l.yearMakeModel}</td>
-                <td>${l.location}</td>   
-                <td><a href="${l.url}">${l.url}</a></td>    
-            </tr>
-        </c:forEach>
+    <table style = "width:100%" class="pure-table pure-table-bordered">
+	    <thead>
+			<tr>
+				<th>Title</th>
+				<th>YearMakeModel</th>
+				<th>location</th>
+				<th>url</th>
+			</tr>
+		</thead>
+		<tbody>
+	        <c:forEach var="l" items="${listings}">
+	            <tr>
+	                <td>${l.title}</td>
+	                <td>${l.yearMakeModel}</td>
+	                <td>${l.location}</td>   
+	                <td><a href="${l.url}">${l.url}</a></td>    
+	            </tr>
+	        </c:forEach>
+        </tbody>
     </table>
 </c:if><br>
 
-<a href=<c:url 
+<a class="pure-button pure-button-primary" style = "margin-left: 20px;" href=<c:url 
+			value="/searchListings">
+				<c:param name="limit" value="${limit}"/>
+				<c:param name="offset" value="${previousOffset}"/>
+				<c:param name="searchTerm" value="${searchTerm}"/>
+		</c:url>>previous page</a>
+<a class="pure-button pure-button-primary" style = "margin-left: 10px;" href=<c:url 
 			value="/searchListings">
 				<c:param name="limit" value="${limit}"/>
 				<c:param name="offset" value="${offset}"/>
 				<c:param name="searchTerm" value="${searchTerm}"/>
 		</c:url>>next page</a><br>
-<a href=<c:url 
-			value="/searchListings">
-				<c:param name="limit" value="${limit}"/>
-				<c:param name="offset" value="${previousOffset}"/>
-				<c:param name="searchTerm" value="${searchTerm}"/>
-		</c:url>>previous page</a><br>
-<a href="/BensListAutos/">new search</a>
+
+<div class="pure-controls">
+        <style scoped>
+			.button-admin {
+		    color: white;
+		    border-radius: 4px;
+		    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+		    background: rgb(28, 184, 65);
+		    font-size: 80%;
+		    margin-left: 20px; 
+		    margin-top: 30px;
+		}
+		</style>
+		<a class="button-admin pure-button" href="/BensListAutos/">Back To Search Page</a>
+</div>
 
 </body>
 </html>
